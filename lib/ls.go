@@ -84,7 +84,7 @@ func (l *LS) setupLaunch(numberOfSatelliteToLaunch int,
 	endChannel chan int) {
 	startWaitGroup.Add(numberOfSatelliteToLaunch)
 	for i := 0; i < numberOfSatelliteToLaunch; i++ {
-		go l.launchSatellite(completedUpto+i, currentCountPtr, startWaitGroup, endChannel)
+		go l.launchSatellite(completedUpto+i+1, currentCountPtr, startWaitGroup, endChannel)
 	}
 }
 
