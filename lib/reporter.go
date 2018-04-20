@@ -35,6 +35,6 @@ func (r *PrintReporter) ReportControlTransfer(fromLS, toLS, numberOfSatelliteLau
 
 // ReportCompletion reports completion of launch of all satellites
 func (r *PrintReporter) ReportCompletion(lsID, totalSatelliteLaunched, numberOfSatelliteLaunched int) {
-	fmt.Println("Completed: Launched", strconv.Itoa(totalSatelliteLaunched),
-		"Last batch of ", strconv.Itoa(numberOfSatelliteLaunched), "was launched by:"+strconv.Itoa(lsID))
+	fmt.Println("Completed: Launched", strconv.Itoa(totalSatelliteLaunched), "Satellites.",
+		"Last batch of", strconv.Itoa(numberOfSatelliteLaunched), "satellites", "was launched by:"+"LS"+strconv.Itoa(lsID))
 }
