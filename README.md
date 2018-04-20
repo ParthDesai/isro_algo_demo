@@ -9,7 +9,7 @@ cd $GOBIN
 ./isro_algo_demo
 ```
 
-## Command line supported
+## Command line options supported:
 ```bash
 ./isro_algo_demo -help
 Usage of ./isro_algo_demo:
