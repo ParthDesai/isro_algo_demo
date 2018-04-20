@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/parthdesai/teliaxProj/lib"
+	"github.com/parthdesai/isro_algo_demo/lib"
 )
 
 func main() {
