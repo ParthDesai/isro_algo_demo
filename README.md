@@ -1,6 +1,10 @@
 # isro_algo_demo
 Program to simulate ISRO satellite launch, using various golang sync constructs. 
 
+## Requirements
+Go version: 1.10.1\
+Go environment variables in place
+
 ## Instruction to install and run this program:
 ```bash
 go get github.com/parthdesai/isro_algo_demo
