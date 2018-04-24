@@ -57,6 +57,8 @@ func (l *LS) LaunchBatch(completedUpto, remainingSatellitesToLaunch int) {
 
 	l.setupLaunch(numberOfSatelliteToLaunch, completedUpto, &currentCount, &startWaitGroup, endChannel)
 
+	// Two sync points needed in go routine to separate increament of count down and
+	// printing of current count
 	for currentCount >= 0 {
 		startWaitGroup.Wait()
 		l.reporter.ReportCountDown(l.id, currentCount)

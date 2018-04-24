@@ -23,6 +23,8 @@ func (isro *ISRO) Init(numberOfLS int, perLSSatellites int, reporter Reporter) {
 		isro.ls[i] = &LS{}
 	}
 
+	// perLSSatellites is separate because of flexibility that, each LS can have
+	// different capabilities to launch satellites.
 	for i, satCount := 0, 0; i < (len(isro.ls) - 1); i, satCount = i+1, satCount+perLSSatellites {
 		isro.ls[i].Init(i+1, isro.ls[i+1], 10, perLSSatellites, reporter, isro.completionWaitGroup)
 	}
